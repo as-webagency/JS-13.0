@@ -7,4 +7,8 @@ let result = num.reduce((total, sum) =>  {
 });
 
 console.log(result);
-console.log("result:", typeof result);
+
+result **= 3;
+console.log("Результат возведения в степень 3: ", result);
+
+console.log("Вывести на экран первые 2 цифры полученного числа: ", String(result).slice(0, 2));
