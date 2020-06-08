@@ -14,7 +14,9 @@ let money = +prompt( 'Ваш месячный доход? ', '' ), // Доход
     target = mission / budgetMonth,
     budgetDay = budgetMonth / 30;
     
-    addExpenses.toLowerCase().split( ', ' );
+    if (addExpenses) {
+        addExpenses.toLowerCase().split( ', ' );
+    }
     
     if ( budgetDay >= 1200 ) {
         console.log( 'У вас высокий уровень дохода' );
@@ -35,6 +37,9 @@ let money = +prompt( 'Ваш месячный доход? ', '' ), // Доход
     console.log( "За сколько месяцев будет достигнута цель: ", Math.floor(target));
     console.log( "Бюджет на месяц: ", Math.ceil(budgetDay));
     
-    console.log( 'Длинна строки: ', addExpenses.length);
+    if (addExpenses) {
+        console.log( 'Длинна строки: ', addExpenses.length);
+    }
+    
     console.log( 'Период равен ' + period + ' месяцев' );
     console.log( 'Цель заработать ' + mission + ' рублей/долларов/гривен/юани' );
