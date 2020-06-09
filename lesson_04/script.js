@@ -9,8 +9,7 @@ let money = +prompt( 'Ваш месячный доход? ', '' ), // Доход
     expenses1 = prompt( 'Введите обязательную статью расходов? ', '' ),
     amount1 = +prompt( 'Во сколько это обойдется? ', '' ),
     expenses2 = prompt( 'Введите обязательную статью расходов? ', '' ),
-    amount2 = +prompt( 'Во сколько это обойдется? ', '' ),
-    accumulatedMonth; // результат вызова функции getAccumulatedMonth
+    amount2 = +prompt( 'Во сколько это обойдется? ', '' );
 
 let showTypeOf = function ( data ) {
     console.log( data, typeof ( data ) ); 
@@ -36,7 +35,9 @@ if ( addExpenses ) {
 let getAccumulatedMonth = function () {
     return money - getExpensesMonth();
 };
-accumulatedMonth = getAccumulatedMonth();
+
+// результат вызова функции getAccumulatedMonth
+let accumulatedMonth = getAccumulatedMonth();
 
 let getTargetMonth = function () {
     let target = mission / accumulatedMonth;
