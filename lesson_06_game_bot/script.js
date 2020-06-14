@@ -1,7 +1,7 @@
 'use strict';
 
 function outerBot() {
-    let mysteriousNumber = Math.floor(Math.random() * 5 + 1);
+    let mysteriousNumber = Math.floor(Math.random() * 100 + 1);
     console.log("outerBot -> mysteriousNumber", mysteriousNumber)
     
     function innerBot() {
