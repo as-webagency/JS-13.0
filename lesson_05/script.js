@@ -5,16 +5,14 @@ let isNumber = function (n) {
 };
 
 let money,
-    income = prompt( 'Дополнительный доход ', '' ), // строка с дополнительными доходом (например: фриланс)
-    addExpenses = prompt( 'Перечислите возможные расходы за рассчитываемый период через запятую ', '' ), // перечисляем дополнительный расход 
+    income = 'Фриланс', // строка с дополнительными доходом (например: фриланс)
+    addExpenses = prompt( 'Перечислите возможные расходы через запятую ', '' ), // перечисляем дополнительный расход 
     deposit = confirm( 'Есть ли у вас депозит в банке? ' ), // булево значение true/false
-    mission = +prompt( 'Какую сумму хотите накопить? ', '' ), // любое число (Какую сумму хотите накопить)
-    period = +prompt( 'Период (от 1 до 12 месяцев) ', '' ),// число от 1 до 12 (месяцев)
+    mission = 50000, // любое число (Какую сумму хотите накопить)
+    period = 3,// число от 1 до 12 (месяцев)
     expenses = []; 
 
 let start = function () {
-    money = prompt( 'Ваш месячный доход? ', '' );
-
     do {
         money = prompt( 'Ваш месячный доход? ', '' );
     } while (!isNumber( money ));
@@ -26,9 +24,9 @@ let showTypeOf = function ( data ) {
     console.log( data, typeof ( data ) ); 
 };
 
-// showTypeOf( money );
-// showTypeOf( income );
-// showTypeOf( deposit );
+showTypeOf( money );
+showTypeOf( income );
+showTypeOf( deposit );
 
 
 // возвращает сумму всех обязательных расходов за месяц
@@ -90,8 +88,7 @@ console.log( getStatusIncome() );
 
 
     
-// console.log( "Месячный бюджет: ", budgetMonth);
-//console.log( "За сколько месяцев будет достигнута цель: ", Math.floor(target));
-// console.log( "Бюджет на месяц: ", Math.ceil(budgetDay));
-// console.log( 'Период равен ' + period + ' месяцев' );
-// console.log( 'Цель заработать ' + mission + ' рублей/долларов/гривен/юани' );
+//console.log( "Месячный бюджет: ", budgetMonth);
+console.log( "Бюджет на месяц: ", Math.ceil(budgetDay));
+console.log( 'Период равен ' + period + ' месяцев' );
+console.log( 'Цель заработать ' + mission + ' рублей/долларов/гривен/юани' );
