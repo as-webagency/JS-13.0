@@ -13,8 +13,6 @@ let money,
     expenses = []; 
 
 let start = function () {
-    money = prompt( 'Ваш месячный доход? ', '' );
-
     do {
         money = prompt( 'Ваш месячный доход? ', '' );
     } while (!isNumber( money ));
@@ -26,9 +24,9 @@ let showTypeOf = function ( data ) {
     console.log( data, typeof ( data ) ); 
 };
 
-// showTypeOf( money );
-// showTypeOf( income );
-// showTypeOf( deposit );
+showTypeOf( money );
+showTypeOf( income );
+showTypeOf( deposit );
 
 
 // возвращает сумму всех обязательных расходов за месяц
@@ -90,8 +88,7 @@ console.log( getStatusIncome() );
 
 
     
-// console.log( "Месячный бюджет: ", budgetMonth);
-//console.log( "За сколько месяцев будет достигнута цель: ", Math.floor(target));
-// console.log( "Бюджет на месяц: ", Math.ceil(budgetDay));
-// console.log( 'Период равен ' + period + ' месяцев' );
-// console.log( 'Цель заработать ' + mission + ' рублей/долларов/гривен/юани' );
+//console.log( "Месячный бюджет: ", budgetMonth);
+console.log( "Бюджет на месяц: ", Math.ceil(budgetDay));
+console.log( 'Период равен ' + period + ' месяцев' );
+console.log( 'Цель заработать ' + mission + ' рублей/долларов/гривен/юани' );
