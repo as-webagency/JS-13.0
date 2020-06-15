@@ -1,7 +1,7 @@
 'use strict';
 
 function outerBot() {
-    let mysteriousNumber = Math.floor(Math.random() * 5 + 1);//100
+    let mysteriousNumber = Math.floor(Math.random() * 100 + 1);
     
     function innerBot() {
         let numberEntered = +prompt( 'Угадай число от 1 до 100', '' );
