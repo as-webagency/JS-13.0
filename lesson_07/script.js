@@ -27,19 +27,23 @@ let appData = {
     expensesMonth: 0,
     asking: function () {
         let addExpenses = prompt( 'Перечислите возможные расходы через запятую ', '' );
-            appData.addExpenses.toLowerCase().split( ', ' );
+            appData.addExpenses = addExpenses.toLowerCase().split( ', ' );
             appData.deposit = confirm( 'Есть ли у вас депозит в банке? ' );
+    
+        for (let i = 0; i < 2; i++) {
+            let expenses = prompt( 'Введите обязательную статью расходов? ', '' ),
+                count;
+
+            do {
+                count += +prompt( 'Во сколько это обойдется? ', '' );
+            } while (!isNumber( count ));
+
+            appData.expenses[expenses] = count;
+        }
     },
     // возвращает сумму всех обязательных расходов за месяц
     getExpensesMonth: function () {
-        let sum = 0;
-    
-        for (let i = 0; i < 2; i++) {
-            appData.expenses[i] = prompt( 'Введите обязательную статью расходов? ', '' );
-            sum += +prompt( 'Во сколько это обойдется? ', '' );
-        }
         
-        return sum;
     },
     // результат вызова функции getAccumulatedMonth
     getAccumulatedMonth: function () {
@@ -67,6 +71,7 @@ let appData = {
         } else if ( appData.budgetDay <= 0 || -appData.budgetDay ) {
             return ( 'Что то пошло не так' );
         }
+        console.log("appData.budgetDay", typeof appData.budgetDay)
     }
 };
 
